@@ -136,8 +136,8 @@ class Metrics(object):
         # Statistics in training procedure
         self.loss_on_train_data = [0] * num_rounds
         self.acc_on_train_data = [0] * num_rounds
-        self.gradnorm_on_train_data = [0] * num_rounds
-        self.graddiff_on_train_data = [0] * num_rounds
+        self.gradnorm_on_train_data = [0] * num_rounds #the norm of the global gradient
+        self.graddiff_on_train_data = [0] * num_rounds #the variance of the gradients among workers
 
         # Statistics in test procedure
         self.loss_on_eval_data = [0] * num_rounds
